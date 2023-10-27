@@ -6,6 +6,7 @@
 
 body {
   background-color: #fff;
+  padding-inline: 1rem;
 }
 
 header {
@@ -35,6 +36,7 @@ header > h1 > span.blue {
   border-radius: 0.8rem;
   padding: 2rem;
   margin-inline: auto;
+  margin-bottom: 1rem;
 }
 
 .container > h1 {
@@ -51,9 +53,10 @@ header > h1 > span.blue {
 .controllers {
   margin-top: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .controllers > div {
@@ -75,4 +78,22 @@ header > h1 > span.blue {
 .controllers > div > input[type="range"] {
   width: 12rem;
   margin-block: 0.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    margin-block: 2rem;
+  }
+  .container > h1 {
+    font-size: 1.2rem;
+  }
+
+  .controllers {
+    gap: 1rem;
+  }
+
+  .controllers > div:not(:last-child) {
+    border-bottom: 1px solid lightgray;
+    flex: 1;
+  }
 }
