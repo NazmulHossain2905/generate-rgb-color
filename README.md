@@ -1,6 +1,6 @@
 # Generate RGB Color.
 
-## [Visit - Live Site]()
+## [Visit - Live Site](https://nazmulhossain2905.github.io/generate-rgb-color/)
 
 ## Screenshots
 
