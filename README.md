@@ -4,11 +4,21 @@
 
 ## Screenshots
 
-<img src="./images/Generate-RGB-Color.png" alt="Generate RGB Color" width="100%">
+<img src="./assets/images/Generate-RGB-Color.png" alt="Generate RGB Color" width="100%">
 
 ---
 
-<img src="./images/Generate-RGB-Color-1.png" alt="Generate RGB Color" width="100%">
+<img src="./assets/images/Generate-RGB-Color-1.png" alt="Generate RGB Color" width="100%">
+
+---
+
+### RGBA Color - rgba(red, green, blue, alpha)
+
+<img src="./assets/images/Generate-RGBA-Color.png" alt="Generate RGBA Color" width="100%">
+
+---
+
+<img src="./assets/images/Generate-RGBA-Color-1.png" alt="Generate RGBA Color" width="100%">
 
 ### Using Languages
 
