@@ -17,16 +17,17 @@ const initialApp = () => {
       const inputRange = controller.querySelector(`input[type="range"]`);
       const inputRangeValue = controller.querySelector("p:last-child");
 
-      inputRangeValue.textContent = inputRange.value;
-      RGBColorObj[inputRange.name] = inputRange.value;
+      const setRGBColor = (key, value) => {
+        inputRangeValue.textContent = value;
+        RGBColorObj[key] = value;
+      };
 
+      setRGBColor(inputRange.name, inputRange.value);
       showRGBColor();
 
       inputRange.addEventListener("input", (e) => {
         const target = e.target;
-        inputRangeValue.textContent = target.value;
-        RGBColorObj[target.name] = target.value;
-
+        setRGBColor(target.name, target.value);
         showRGBColor();
       });
     });
