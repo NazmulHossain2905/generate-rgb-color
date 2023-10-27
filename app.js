@@ -7,7 +7,8 @@ const initialApp = () => {
     const { red, green, blue } = RGBColorObj;
     const generateRGBColor = `rgb(${red}, ${green}, ${blue})`;
     RGBHeading.style.backgroundColor = generateRGBColor;
-    RGBHeading.textContent = generateRGBColor;
+    RGBHeading.textContent = generateRGBColor + ";";
+    determineTextColor(generateRGBColor);
   };
 
   const renderScreen = () => {
@@ -32,6 +33,32 @@ const initialApp = () => {
       });
     });
   };
+
+  // ===========================
+  /*
+    To dynamically change the text color of an <h1> element based on the background color, you can use JavaScript. 
+    You'll need to determine the background color of the <h1> element and set the text color accordingly. 
+    Here's a simple example of how you can achieve this using JavaScript:
+  */
+  const computedStyles = getComputedStyle(RGBHeading);
+  const backgroundColor = computedStyles.backgroundColor;
+
+  function determineTextColor(backgroundColor) {
+    const rgb = backgroundColor.match(/\d+/g);
+
+    const luminance = 0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2];
+    // const brightness =
+    //   (parseInt(rgb[0]) + parseInt(rgb[1]) + parseInt(rgb[2])) / 3;
+
+    if (luminance > 128) {
+      RGBHeading.style.color = "black";
+    } else {
+      RGBHeading.style.color = "white";
+    }
+  }
+
+  determineTextColor(backgroundColor);
+  // ===========================
 
   renderScreen();
 };

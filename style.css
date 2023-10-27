@@ -45,6 +45,7 @@ header > h1 > span.blue {
   align-items: center;
   color: #fff;
   font-family: Consolas, "Courier New", Courier, monospace;
+  border: 1px solid lightgray;
 }
 
 .controllers {
