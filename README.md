@@ -6,7 +6,7 @@ An RGB color value represents RED, GREEN, and BLUE light sources.
 
 In CSS, a color can be specified as an RGB value, using this formula:
 
-**`rgb(red, green, blue)`**
+**rgb(red, green, blue)**
 
 Each parameter (red, green, and blue) defines the intensity of the color between 0 and 255.
 
